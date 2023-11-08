@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css"/>
+        <title>Coding Quiz</title>
+    </head>
+    <body>
+        <div>
+            <section class="scores"><a href="scores.html">Highscores</a></section>
+            <section class="timer">Time <span id="time">0</span></section>
+        </div>
+
+        <div class="wrap">
+            <section id="welcoming-screen" class="start">
+                <h1>Coding Quiz!</h1>
+                    <p>Time to see what you know about coding! This challenge consists of a series of code related questions to test your knowledge of coding. This is a timed quiz and the faster you answer correctly the higher your score will be. For each question you answer incorrectly, there will be a 10 second time penelty.</p>
+                <button id="start">Start</button>
+            </section>
+        </div>
+
+    <div id="questions" class="hide">
+        <h2 id="question-promt"></h2>
+        <section id="selections" class="selections"></section>
+    </div>
+
+    <div id="ending-screen" class="hide">
+            <h2>Complete!</h2>
+                <p>Your score: <span id="final-score"></span></p>
+                <p>Enter your initials: <input type="text" id="initials"></p>
+            <button id="submit">Submit!</button>
+        </div>
+
+    <script src="./JS/questions.js"></script>
+    <script src="./JS/script.js"></script>
+
+    </body>
+</html>
