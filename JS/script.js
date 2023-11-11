@@ -1,15 +1,33 @@
-var index = 0
+var timeEl = document.querySelector("#time")
+var time = questions.length * 10
+var timerId
+var index = 0 
+
+function timerStart() {
+    if (!timerId) {
+        timerId = setInterval(function() {
+            timeEl.textContent = time;
+            time--;
+
+            if (time < 0) {
+                clearInterval(timerId);
+            }
+        }, 1000);
+    }
+}
 
 document.getElementById("start").addEventListener("click", function(){
     document.getElementById("welcoming-screen").style.display = "none"
     document.getElementById("questions").style.display = "block"
     displayQuestion()
+    timerStart()
 })
 
 function displayQuestion() {
 var currentQuestion = questions[index]
 document.getElementById("question-promt").innerText = currentQuestion.prompt
 document.getElementById("selections").innerHTML = ""
+
 for (var i = 0; i < currentQuestion.selections.length; i++) {
     var button = document.createElement("button")
     button.innerText = currentQuestion.selections[i]
@@ -17,12 +35,23 @@ for (var i = 0; i < currentQuestion.selections.length; i++) {
     document.getElementById("selections").appendChild(button)
 }
 }
+
 function checkAnswer(event) {
 var choice = event.target.innerText
 var correct = questions[index].answer
 if (choice !== correct) {
-    // deduct time here
+    time -= 10;
+
+    if (time < 0) {
+        time = 0;
+    }
 }
+
+function quizEnding() {
+    clearInterval(timerId);
+    quizEnding()
+}
+
 index++
 if (index >= questions.length) {
     document.getElementById("questions").style.display = "none"
@@ -31,6 +60,7 @@ if (index >= questions.length) {
 }
 displayQuestion()
 }
+
 document.getElementById("submit").addEventListener("click", function(){
     var initials = document.getElementById("initials").value
     var highscores = JSON.parse(localStorage.getItem("scores"))||[]
