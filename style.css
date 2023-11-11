@@ -45,3 +45,10 @@ button:active {
     transform: translateY(5px);
 }
 
+#ending-screen {
+    display: none
+}
+
+.hide {
+    display: none
+}
