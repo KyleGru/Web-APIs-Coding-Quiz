@@ -47,28 +47,52 @@ if (choice !== correct) {
     }
 }
 
-function quizEnding() {
-    clearInterval(timerId);
-    quizEnding()
-}
 
 index++
 if (index >= questions.length) {
+    clearInterval(timerId)
     document.getElementById("questions").style.display = "none"
     document.getElementById("ending-screen").style.display = "block"
+    document.getElementById("final-score").textContent = time
     return
 }
 displayQuestion()
 }
 
-document.getElementById("submit").addEventListener("click", function(){
+function saveHighscore() {
     var initials = document.getElementById("initials").value
     var highscores = JSON.parse(localStorage.getItem("scores"))||[]
     var score = {
-        initials
-        // put time here
-    }
+        initials,
+        time: time,
+    };
+    
     highscores.push(score)
     localStorage.setItem("scores", JSON.stringify(highscores))
-    window.location.replace("scores.html")
+    
+    var highscoresList = document.getElementById("highscores-list");
+    highscoresList.innerHTML = "";
+
+    highscores.forEach(function(score) {
+        var listItem = document.createElement("li");
+        
+        var initialsSpan = document.createElement("span");
+        initialsSpan.textContent = score.initials;
+        
+        var timeSpan = document.createElement("span");
+        timeSpan.textContent = score.time;
+        
+        listItem.appendChild(initialsSpan);
+        listItem.appendChild(document.createTextNode(": "));
+        listItem.appendChild(timeSpan)
+        
+        highscoresList.appendChild(listItem);
+    });
+}
+
+
+
+document.getElementById("submit").addEventListener("click", function() {
+    saveHighscore();
+    window.location.replace("scores.html");
 })
