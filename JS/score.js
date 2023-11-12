@@ -23,7 +23,7 @@ function displayHighscores() {
     });
 }
 
-displayHighscores()
+// displayHighscores()
 
 function deleteHighscores() {
     window.localStorage.removeItem("scores");

@@ -52,3 +52,24 @@ button:active {
 .hide {
     display: none
 }
+
+#questions  {
+    text-align: center;
+}
+
+.selections {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    width: 40%;
+}
+
+.selections button {
+    margin-bottom: 10px;
+}
+
+#alert-message {
+    font-size: xx-large;
+    font-style: italic;
+    font-weight: 400;
+}
