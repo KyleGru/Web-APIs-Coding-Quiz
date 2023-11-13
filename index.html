@@ -8,11 +8,13 @@
     </head>
     <body>
         <div>
+            <!-- Container for Highscores and the Timer -->
             <section class="scores"><a href="scores.html">Highscores</a></section>
             <section class="timer">Time <span id="time">0</span></section>
         </div>
 
         <div class="wrap">
+            <!-- Welcoming screen with description of the quiz -->
             <section id="welcoming-screen" class="start">
                 <h1>Coding Quiz!</h1>
                     <p>Time to see what you know about coding! This challenge consists of a series of code related questions to test your knowledge of coding. This is a timed quiz and the faster you answer correctly the higher your score will be. For each question you answer incorrectly, there will be a 10 second time penelty.</p>
@@ -21,12 +23,14 @@
         </div>
 
     <div id="questions" class="hide">
+        <!-- Container for the questions elements -->
         <h2 id="question-promt">question</h2>
         <section id="selections" class="selections"></section>
         <section id="alert-message"></section>
     </div>
 
     <div id="ending-screen" class="hide">
+        <!-- The ending screen where the user can input their initials and submit their score -->
             <h2>Complete!</h2>
                 <p>Your score: <span id="final-score"></span></p>
                 <p>Enter your initials: <input type="text" id="initials"></p>

@@ -20,12 +20,12 @@ The use of multiple HTML and JS files allowed me to oraganize my code in a clean
 
 ## Resources
 
-https://www.w3schools.com/js/js_functions.asp
-https://www.w3schools.com/js/js_events.asp
-https://www.w3schools.com/js/js_json_parse.asp
-https://www.w3schools.com/js/js_json_stringify.asp
-Tutor session with Chris B
-https://github.com/ReindeerCode/Web-APIs-Code-Quiz/tree/master
+https://www.w3schools.com/js/js_functions.asp,
+https://www.w3schools.com/js/js_events.asp,
+https://www.w3schools.com/js/js_json_parse.asp,
+https://www.w3schools.com/js/js_json_stringify.asp,
+Tutor session with Chris B,
+https://github.com/ReindeerCode/Web-APIs-Code-Quiz/tree/master,
 Coding All-In-One for Dummies 2nd edition, Chapter 11
 ## Links
 

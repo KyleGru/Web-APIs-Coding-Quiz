@@ -5,6 +5,7 @@ function displayHighscores() {
         return a.time - b.time;
     });
 
+    // This function sets up the display of the scores
     highscores.forEach(function(score) {
         var listItem = document.createElement("li");
 
@@ -22,9 +23,7 @@ function displayHighscores() {
 
     });
 }
-
-// displayHighscores()
-
+// Option to delete the list of highscores
 function deleteHighscores() {
     window.localStorage.removeItem("scores");
     window.location.reload();

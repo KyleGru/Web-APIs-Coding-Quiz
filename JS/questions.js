@@ -1,3 +1,4 @@
+// Questions for the coding quiz
 var questions = [
     {
         prompt: "What is the correct way to declare a variable in JavaScript?",
