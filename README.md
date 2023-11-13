@@ -29,4 +29,6 @@ https://github.com/ReindeerCode/Web-APIs-Code-Quiz/tree/master,
 Coding All-In-One for Dummies 2nd edition, Chapter 11
 ## Links
 
+https://github.com/KyleGru/Web-APIs-Coding-Quiz
+ https://kylegru.github.io/Web-APIs-Coding-Quiz/
 # Module-Web-APIs-Challenge-
